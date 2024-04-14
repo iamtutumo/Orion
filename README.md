@@ -1,15 +1,3 @@
-<img src="https://github.com/oriondesign2015/SetupOrion/assets/139019565/2202b6a6-55ba-48ca-92df-7fcab5d20857" alt=”SetupOrion”>
-<p align="center">
-   This Auto Installer is a <b>100% free</b> solution, with the aim of helping the entire community to install the main tools on the Automation/Marketing market on their server.
-  <b> You don't need to install all the programs contained in it, as you can choose which of the tools you want to install.</b>
-  Developed by <b>OrionDesign</b>. When using the same, <b>of the credits</b>!
-</p>
-
-<p align="center">
-  <a href="https://chat.whatsapp.com/Cb3Kw0YlCHIJJqS84eC6ie"><img src="https://img.shields.io/badge/Comunidade_no_Whatsapp-4EA94B?style=for-the-badge&labelColor=black&logo=whatsapp&logoColor=4EA94B" alt="Comunidade no Whatsapp"></a>    
-  <a href="https://youtube.com/oriondesign_oficial"><img src="https://img.shields.io/badge/Playlist_do_Setup_Orion-FF0000?style=for-the-badge&labelColor=ffffff&logo=youtube&logoColor=FF0000" alt="Inscreva-se no meu canal"></a>
-</p>
-
 <h1></h1>
 <h3>📌 Observations and Recommendations</h3>
 
@@ -25,7 +13,7 @@
 <p>Just run this code on your server terminal:</p>
 
 ```
-bash <(curl -sSL setup.oriondesign.art.br)
+bash <(curl -sSL https://raw.githubusercontent.com/iamtutumo/Orion/main/Setup)
 ```
 <p>After that, just wait a few moments while the script starts and finally, install the tools you want..</p>
 <h1></h1>
