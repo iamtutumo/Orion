@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# Checks if the user is root
+if [ "$(id -u)" -ne 0 ]; then
+    echo "This script needs to be run as root. Running sudo su..."
+    sudo su
+fi
+
+# Checks if the user is in the /root/ directory
+if [ "$PWD" != "/root" ]; then
+    echo "Changing to the /root/ directory"
+    cd /root || exit
+fi
+
+# Check if you are using Ubuntu 20.04
+if ! grep -q 'Ubuntu 20.04' /etc/os-release; then
+    echo "This script recommends using Ubuntu 20.04."
+    sleep 3
+fi
+
+# Rest of your script
+sudo apt-get install -y apt-utils
+sudo apt-get install -y dialog
+sudo apt update
+sudo apt upgrade -y
+
+# Checks if the SetupOrion file already exists
+if [ -e "SetupOrion" ]; then
+    echo "The SetupOrion file already exists. Removing..."
+    rm SetupOrion
+fi
+
+# Download the script
+curl -sSL https://raw.githubusercontent.com/oriondesign2015/SetupOrion/main/SetupOrion -o SetupOrion
+
+# Checks if the download was successful
+if [ $? -eq 0 ]; then
+    # Run the downloaded script
+    chmod +x SetupOrion
+    ./SetupOrion
+else
+    echo "Failed to download SetupOrion script"
+fi
+
+sudo apt update
+sudo apt upgrade -y
+
+clear
+rm SetupOrion
